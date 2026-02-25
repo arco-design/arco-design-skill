@@ -1,6 +1,6 @@
 ---
 name: arco-design
-description: "Complete reference for Arco Design React UI component library (@arco-design/web-react). Use when building React UIs with Arco Design components, including forms, tables, modals, navigation, layout, data display, and feedback components. Covers import patterns, theming, i18n, and best practices."
+description: "Arco Design React UI component library reference (@arco-design/web-react). Use this skill whenever the user asks to build a page, create a UI, write frontend code, develop a web application, design a dashboard, or implement any React interface — especially when they mention Arco, arco-design, @arco-design/web-react, or any Arco component name (Button, Table, Form, Modal, Select, Menu, etc.). Covers all 70 components with full API, code examples, import patterns, theming, i18n, layout, forms, tables, modals, navigation, data entry, data display, feedback, responsive design, and best practices."
 ---
 
 # Arco Design React — Skills Reference
