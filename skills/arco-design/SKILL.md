@@ -1,5 +1,5 @@
 ---
-name: arco-design-skills
+name: arco-design
 description: Arco Design React 组件库完整参考。当用户使用 @arco-design/web-react 进行开发时，根据需要加载对应的组件、模式或 Hooks 参考文件。
 ---
 
