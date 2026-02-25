@@ -52,4 +52,4 @@ description: Arco Design React 组件库完整参考。当用户使用 @arco-des
 - [响应式设计](patterns/responsive-design.md) — Grid 断点、自适应布局
 
 ### 使用 Hooks 时
-- [Hooks 参考](hooks/hooks.md) — useResponsive、useFocusEffect 等公共和内部 Hooks
+- [Hooks 参考](hooks/hooks.md) — 当需要使用验证码组件 useVerificationCode 用法、水印组件 useWatermark 用法时使用。
