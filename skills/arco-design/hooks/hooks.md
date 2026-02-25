@@ -1,6 +1,6 @@
 ---
 name: arco-hooks
-description: Arco Design 公共 Hooks 与内部 Hooks 参考。当需要使用 useResponsive、useFocusEffect 等 Hooks 或了解组件内部 Hook 实现时使用。
+description: Arco Design 公共 Hooks 参考。当需要使用验证码组件 useVerificationCode 用法和水印组件 useWatermark 用法时使用。
 user-invocable: false
 ---
 
