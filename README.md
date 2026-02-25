@@ -11,7 +11,7 @@ A collection of **skill files** covering the [Arco Design](https://arco.design) 
 - **70 components** — API reference, code examples, and best practices for every component
 - **5 overview guides** — Installation, global config, theming, i18n, architecture patterns
 - **5 pattern guides** — Forms, tables, modals, controlled/uncontrolled, responsive design
-- **1 hooks reference** — Public hooks usage
+- **2 hooks references** — useVerificationCode, useWatermark
 
 When writing code with Arco Design, AI agents automatically load the relevant skill to get accurate API info and best practices.
 
@@ -42,7 +42,8 @@ skills/
     │   ├── controlled-uncontrolled.md #   Controlled vs uncontrolled patterns
     │   └── responsive-design.md       #   Grid breakpoints, adaptive layout
     └── hooks/
-        └── hooks.md                   #   Public hooks reference
+        ├── use-verification-code.md   #   useVerificationCode hook
+        └── use-watermark.md           #   useWatermark hook
 ```
 
 ## Skill File Structure
@@ -181,4 +182,5 @@ All sub-skills have `user-invocable: false` — agents load them automatically b
 | Modal Patterns | [modal-patterns.md](skills/arco-design/patterns/modal-patterns.md) | Form-in-modal, confirmation flows, nested drawers |
 | Controlled vs Uncontrolled | [controlled-uncontrolled.md](skills/arco-design/patterns/controlled-uncontrolled.md) | Choosing value+onChange vs defaultValue |
 | Responsive Design | [responsive-design.md](skills/arco-design/patterns/responsive-design.md) | Grid breakpoints, adaptive layout |
-| Hooks | [hooks.md](skills/arco-design/hooks/hooks.md) | useVerificationCode, useWatermark |
+| useVerificationCode | [use-verification-code.md](skills/arco-design/hooks/use-verification-code.md) | Custom OTP input hook |
+| useWatermark | [use-watermark.md](skills/arco-design/hooks/use-watermark.md) | Dynamic canvas watermark hook |

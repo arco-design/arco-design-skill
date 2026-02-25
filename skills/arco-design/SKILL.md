@@ -152,6 +152,9 @@ Load the relevant file below for full API reference, code examples, and best pra
 
 ### Hooks
 
+Import from `@arco-design/web-react/hooks`. Use these headless hooks only when you need a fully custom UI — otherwise prefer the corresponding component.
+
 | Hook | File | Use for |
 |------|------|---------|
-| useVerificationCode, useWatermark | [hooks.md](hooks/hooks.md) | OTP input control, dynamic watermark management |
+| useVerificationCode | [use-verification-code.md](hooks/use-verification-code.md) | Custom OTP input with focus, paste, keyboard navigation |
+| useWatermark | [use-watermark.md](hooks/use-watermark.md) | Dynamic canvas watermark with tamper protection |
