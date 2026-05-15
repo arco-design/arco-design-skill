@@ -29,10 +29,25 @@ import { Collapse } from '@arco-design/web-react';
 | `activeKey` / `defaultActiveKey` | `string[]` | — | 展开的面板 |
 | `accordion` | `boolean` | — | 手风琴模式 |
 | `bordered` | `boolean` | `true` | 边框 |
+| `expandIcon` | `ReactNode` | — | 自定义展开图标 |
 | `expandIconPosition` | `'left' \| 'right'` | `'left'` | 展开图标位置 |
+| `triggerRegion` | `'header' \| 'icon'` | `'header'` | 触发展开的区域（2.41.0） |
 | `lazyload` | `boolean` | `true` | 延迟渲染 |
 | `destroyOnHide` | `boolean` | — | 隐藏时销毁 |
 | `onChange` | `(key, keys, e) => void` | — | 展开变化 |
+
+## CollapseItemProps
+
+| 属性 | 类型 | 默认值 | 说明 |
+|------|------|--------|------|
+| `name` | `string` | — | 唯一标识 |
+| `header` | `ReactNode` | — | 面板标题 |
+| `extra` | `ReactNode` | — | 标题右侧额外内容 |
+| `disabled` | `boolean` | — | 禁用 |
+| `showExpandIcon` | `boolean` | `true` | 显示展开图标 |
+| `expandIcon` | `ReactNode` | — | 自定义展开图标（覆盖 Collapse） |
+| `contentStyle` | `CSSProperties` | — | 内容区样式 |
+| `destroyOnHide` | `boolean` | — | 隐藏时销毁（覆盖 Collapse） |
 
 ## 常用模式
 

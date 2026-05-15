@@ -46,7 +46,7 @@ const { RangePicker, MonthPicker, YearPicker, QuarterPicker, WeekPicker } = Date
 | `allowClear` | `boolean` | `true` | 可清除 |
 | `size` | `'mini' \| 'small' \| 'default' \| 'large'` | — | 尺寸 |
 | `placeholder` | `string` | — | 占位文字 |
-| `position` | `'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br'` | — | 弹出位置 |
+| `position` | `'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br'` | `'bl'` | 弹出位置 |
 | `error` | `boolean` | — | 错误状态 |
 | `status` | `'error' \| 'warning'` | — | 状态 |
 | `editable` | `boolean` | `true` | 允许手动输入 |

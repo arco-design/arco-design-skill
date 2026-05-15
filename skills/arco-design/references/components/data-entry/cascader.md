@@ -52,6 +52,12 @@ const options = [
 | `loadMore` | `(pathValue, level) => Promise<CascaderOption[]>` | — | 动态加载 |
 | `fieldNames` | `{ label, value, children, disabled, isLeaf }` | — | 自定义字段名 |
 | `renderFormat` | `(valueShow: string[]) => ReactNode` | — | 自定义显示格式 |
+| `icons` | `{ loading?: ReactNode; checked?: ReactNode; next?: ReactNode }` | — | 自定义图标（2.50.0） |
+| `dropdownMenuClassName` | `string \| string[]` | — | 下拉菜单 class（2.35.0） |
+| `dropdownMenuColumnStyle` | `CSSProperties` | — | 下拉菜单列样式（2.35.0） |
+| `virtualListProps` | `Pick<AvailableVirtualListProps, 'height' \| 'itemHeight' \| 'threshold' \| 'isStaticItemHeight'>` | — | 虚拟滚动（2.35.0） |
+| `triggerProps` | `Partial<TriggerProps>` | — | 透传给底层 Trigger |
+| `getPopupContainer` | `(node) => Element` | — | 弹出容器 |
 | `onChange` | `(value, selectedOptions, extra) => void` | — | 选中回调 |
 
 ### 动态加载

@@ -16,11 +16,11 @@ import { Skeleton } from '@arco-design/web-react';
 // 自定义组合
 <Skeleton loading={loading} animation text={{ rows: 3 }} image />
 
-// 细粒度控制
-<Skeleton>
-  <Skeleton.Image style={{ width: 200, height: 200 }} />
-  <Skeleton.Line rows={3} />
-</Skeleton>
+// 细粒度控制：image 和 text 都可传对象覆盖
+<Skeleton
+  image={{ shape: 'square', size: 'large', style: { width: 200, height: 200 } }}
+  text={{ rows: 3 }}
+/>
 ```
 
 ## API
@@ -36,7 +36,7 @@ import { Skeleton } from '@arco-design/web-react';
 
 - **用于首屏加载**，给出内容布局预期
 - **配合 `animation`** 提供更好的加载体验
-- **组合使用 Skeleton.Image + Skeleton.Line** 模拟具体布局
+- **组合 `image` 与 `text` 配置** 模拟具体布局（v2.53.2 没有 `Skeleton.Image` / `Skeleton.Line` 子组件）
 
 ## 常用模式
 

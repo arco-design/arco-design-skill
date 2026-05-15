@@ -30,7 +30,9 @@ import { Avatar } from '@arco-design/web-react';
 | `size` | `number` | `40` | 大小 |
 | `shape` | `'circle' \| 'square'` | `'circle'` | 形状 |
 | `triggerIcon` | `ReactNode` | — | 交互图标 |
+| `triggerIconStyle` | `CSSProperties` | — | 交互图标样式 |
 | `triggerType` | `'button' \| 'mask'` | `'button'` | 交互类型 |
+| `autoFixFontSize` | `boolean` | `true` | 根据 size 自动调整字体 |
 | `onClick` | `(e) => void` | — | 点击回调 |
 
 ### Avatar.Group Props
@@ -38,8 +40,11 @@ import { Avatar } from '@arco-design/web-react';
 | 属性 | 类型 | 说明 |
 |------|------|------|
 | `size` | `number` | 统一大小 |
+| `shape` | `'circle' \| 'square'` | 统一形状 |
 | `maxCount` | `number` | 最多显示个数 |
+| `maxStyle` | `CSSProperties` | "+N" 头像样式 |
+| `autoFixFontSize` | `boolean` | 自动调整字体（默认 true） |
 | `zIndexAscend` | `boolean` | z-index 递增 |
-| `maxPopoverTriggerProps` | `TriggerProps` | 更多弹出配置 |
+| `maxPopoverTriggerProps` | `Partial<TriggerProps>` | "+N" 弹出层配置 |
 
 

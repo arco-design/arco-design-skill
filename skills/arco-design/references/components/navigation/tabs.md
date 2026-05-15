@@ -48,6 +48,8 @@ import { Tabs } from '@arco-design/web-react';
 | `animation` | `boolean` | — | 切换动画 |
 | `overflow` | `'scroll' \| 'dropdown'` | `'scroll'` | 溢出处理 |
 | `scrollPosition` | `'start' \| 'end' \| 'center' \| 'auto' \| number` | `'auto'` | 滚动位置 |
+| `renderTabHeader` | `(tabProps, DefaultTabHeader) => ReactElement` | — | 自定义整个 Tab 头 |
+| `renderTabTitle` | `(tabTitle, info) => ReactNode` | — | 自定义单个 Tab 标题 |
 | `onChange` | `(key: string) => void` | — | 切换回调 |
 | `onAddTab` | `() => void` | — | 新增回调 |
 | `onDeleteTab` | `(key: string) => void` | — | 删除回调 |

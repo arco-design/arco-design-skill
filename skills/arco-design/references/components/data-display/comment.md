@@ -31,8 +31,8 @@ import { Comment, Avatar } from '@arco-design/web-react';
 | `avatar` | `ReactNode` | 头像 |
 | `content` | `ReactNode` | 评论内容 |
 | `datetime` | `ReactNode` | 时间 |
-| `actions` | `ReactNode[]` | 操作列表 |
-| `align` | `{ datetime, actions }` | 对齐方式 |
+| `actions` | `ReactNode` | 操作列表 |
+| `align` | `'left' \| 'right' \| { datetime?: 'left' \| 'right'; actions?: 'left' \| 'right' }` | 对齐方式 |
 
 ## 常用模式
 

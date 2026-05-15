@@ -34,11 +34,20 @@ import { TreeSelect } from '@arco-design/web-react';
 | `multiple` | `boolean` | 多选 |
 | `treeCheckable` | `boolean` | 复选框模式 |
 | `treeCheckStrictly` | `boolean` | 严格父子无关 |
-| `showSearch` | `boolean` | 搜索 |
+| `treeCheckedStrategy` | `'all' \| 'parent' \| 'child'` | 返回的 checked keys 包含哪些层级 |
+| `treeProps` | `Partial<TreeProps>` | 透传给底层 Tree |
+| `triggerProps` | `Partial<TriggerProps>` | 透传给底层 Trigger |
+| `showSearch` | `boolean \| { retainInputValue?, retainInputValueWhileSelect? }` | 搜索 |
+| `filterTreeNode` | `(inputValue, node) => boolean` | 自定义过滤函数 |
 | `allowClear` | `boolean` | 可清除 |
+| `bordered` | `boolean` | 显示边框（默认 true） |
 | `loadMore` | `(node) => Promise` | 动态加载 |
 | `fieldNames` | `{ key, title, children }` | 字段映射 |
+| `dropdownMenuStyle` | `CSSProperties` | 下拉菜单样式 |
+| `dropdownRender` | `(menu: ReactNode) => ReactNode` | 自定义下拉内容 |
+| `getPopupContainer` | `(node) => HTMLElement` | 弹出层挂载节点 |
 | `onChange` | `(value) => void` | 变化回调 |
+| `onInputValueChange` | `(value: string) => void` | 搜索输入变化（2.39.0） |
 
 ## 常用模式
 

@@ -53,11 +53,24 @@ const data = [
 | `noDataElement` | `ReactNode` | — | 无数据展示 |
 | `showHeader` | `boolean` | `true` | 显示表头 |
 | `showSorterTooltip` | `boolean` | `true` | 排序提示 |
-| `onChange` | `(pagination, sorter, filters, extra) => void` | — | 分页/排序/筛选变化 |
+| `onChange` | `(pagination, sorter, filters, extra) => void` | — | 分页/排序/筛选变化。extra 包含 `{ currentData, currentAllData, action }` (currentAllData 自 2.53.0) |
 | `rowClassName` | `string \| ((record, index) => string)` | — | 行类名 |
 | `onRow` | `(record, index) => HTMLAttributes` | — | 行属性 |
 | `onHeaderRow` | `(columns, index) => HTMLAttributes` | — | 表头行属性 |
 | `onCell` | `(column, index) => HTMLAttributes` | — | 单元格属性 |
+| `tableLayoutFixed` | `boolean` | — | 强制 `table-layout: fixed`（默认有固定列/省略时自动启用） |
+| `footer` | `(currentPageData) => ReactNode` | — | 表尾 |
+| `summary` | `(currentData) => ReactNode` | — | 总结栏（详见下文 `Table.Summary` 示例） |
+| `placeholder` | `ReactNode` | — | 全局空数据占位（优先级低于 `noDataElement`） |
+| `childrenColumnName` | `string` | `'children'` | 树形数据子节点字段名 |
+| `indentSize` | `number` | `16` | 树形数据缩进像素 |
+| `defaultExpandAllRows` | `boolean` | — | 默认展开所有子行 |
+| `defaultExpandedRowKeys` | `Array<string \| number>` | — | 默认展开行（非受控） |
+| `expandedRowKeys` | `Array<string \| number>` | — | 受控展开行 |
+| `expandedRowRender` | `(record, index) => ReactNode` | — | 行展开内容 |
+| `expandProps` | `ExpandProps` | — | 行展开高级配置（详见下文）|
+| `onExpand` | `(record, expanded) => void` | — | 单行展开回调 |
+| `onExpandedRowsChange` | `(expandedRows) => void` | — | 展开行变化回调 |
 
 ### 分页 Pagination
 
@@ -77,23 +90,38 @@ const data = [
 
 ### 行选择 RowSelection
 
-| 属性 | 类型 | 说明 |
-|------|------|------|
-| `rowSelection` | `RowSelectionProps` | 行选择配置 |
+`rowSelection` 接收 `RowSelectionProps`：
+
+| 属性 | 类型 | 默认值 | 说明 |
+|------|------|--------|------|
+| `type` | `'checkbox' \| 'radio'` | `'checkbox'` | 多选/单选 |
+| `selectedRowKeys` | `(string \| number)[]` | — | 受控选中（需配合 `onChange`） |
+| `checkAll` | `boolean` | — | 多选模式显示全选 |
+| `checkStrictly` | `boolean` | `true` | `false` 时父子选择自动联动（2.33.0） |
+| `checkCrossPage` | `boolean` | — | 复选跨分页（非受控；受控需 `preserveSelectedRowKeys`） |
+| `columnTitle` | `string \| ReactNode` | — | 选择列表头 |
+| `columnWidth` | `number` | — | 选择列宽度 |
+| `checkboxProps` | `(record) => object` | — | 复选框属性 |
+| `fixed` | `boolean` | — | 固定到左侧 |
+| `renderCell` | `(originNode, checked, record) => ReactNode` | — | 自定义复选框（2.19.0） |
+| `preserveSelectedRowKeys` | `boolean` | — | 跨页/删除后保留 keys（2.19.0） |
+| `onChange` | `(keys, rows) => void` | — | 选中变化 |
+| `onSelect` | `(selected, record, selectedRows) => void` | — | 单行选中（2.22.0） |
+| `onSelectAll` | `(selected, selectedRows) => void` | — | 全选（2.6.0） |
 
 ```tsx
 const [selectedRowKeys, setSelectedRowKeys] = useState([]);
 
 <Table
   rowSelection={{
-    type: 'checkbox',           // 'checkbox' | 'radio'
+    type: 'checkbox',
     selectedRowKeys,
     onChange: (keys, rows) => setSelectedRowKeys(keys),
     checkboxProps: (record) => ({ disabled: record.disabled }),
-    checkAll: true,             // 显示全选
-    fixed: true,                // 固定选择列
-    columnWidth: 60,            // 选择列宽度
-    preserveSelectedRowKeys: true,  // 跨页保持选中
+    checkAll: true,
+    fixed: true,
+    columnWidth: 60,
+    preserveSelectedRowKeys: true,
     onSelectAll: (selected, selectedRows) => {},
   }}
   columns={columns}
@@ -101,13 +129,24 @@ const [selectedRowKeys, setSelectedRowKeys] = useState([]);
 />
 ```
 
-### 行展开 ExpandedRow
+### 行展开 Expand
+
+`expandProps` 接收 `ExpandProps`：
+
+| 属性 | 类型 | 默认值 | 说明 |
+|------|------|--------|------|
+| `icon` | `(props: { expanded, record }) => ReactNode` | — | 自定义展开图标 |
+| `width` | `number` | — | 展开列宽 |
+| `columnTitle` | `ReactNode` | — | 展开列表头 |
+| `rowExpandable` | `(record) => boolean` | — | 是否允许展开（2.16.0） |
+| `expandRowByClick` | `boolean` | — | 点击行展开（2.19.0） |
+| `strictTreeData` | `boolean` | `true` | 树形数据下 children 长度 > 1 才显示展开图标（2.27.0） |
 
 ```tsx
 <Table
   expandedRowRender={(record) => <p>{record.description}</p>}
   expandProps={{
-    expandRowByClick: true,     // 点击行展开
+    expandRowByClick: true,
     rowExpandable: (record) => record.hasDetail,
     icon: (props) => <IconRight />,
     width: 60,
@@ -129,17 +168,24 @@ const [selectedRowKeys, setSelectedRowKeys] = useState([]);
 | `fixed` | `'left' \| 'right'` | — | 固定列 |
 | `ellipsis` | `boolean` | — | 文本省略 |
 | `render` | `(col, record, index) => ReactNode` | — | 自定义渲染 |
-| `sorter` | `boolean \| ((a, b) => number)` | — | 排序 |
-| `defaultSortOrder` | `'ascend' \| 'descend'` | — | 默认排序 |
+| `sorter` | `boolean \| ((a, b) => number) \| { compare?: (a, b) => number; multiple?: number }` | — | 排序（`multiple` 用于多列排序优先级） |
+| `defaultSortOrder` | `'ascend' \| 'descend'` | — | 默认排序（非受控） |
+| `sortOrder` | `'ascend' \| 'descend'` | — | 受控排序值 |
 | `sortDirections` | `('ascend' \| 'descend')[]` | — | 排序方向 |
 | `filters` | `{ text, value }[]` | — | 筛选菜单 |
 | `onFilter` | `(value, record) => boolean` | — | 筛选函数 |
 | `filterMultiple` | `boolean` | `true` | 多选筛选 |
 | `defaultFilters` | `string[]` | — | 默认筛选值 |
+| `filteredValue` | `string[]` | — | 受控筛选值 |
 | `filterDropdown` | `(props) => ReactNode` | — | 自定义筛选菜单 |
+| `filterIcon` | `ReactNode` | — | 自定义筛选图标 |
+| `filterDropdownProps` | `{ triggerProps?: TriggerProps }` | — | 筛选弹窗 Trigger 配置 |
+| `onFilterDropdownVisibleChange` | `(visible: boolean) => void` | — | 筛选弹窗显隐回调 |
 | `children` | `ColumnProps[]` | — | 多级表头 |
 | `onCell` | `(record, index) => HTMLAttributes` | — | 单元格属性 |
 | `onHeaderCell` | `(column, index) => HTMLAttributes` | — | 表头单元格属性 |
+| `headerCellStyle` | `CSSProperties` | — | 表头单元格样式 |
+| `bodyCellStyle` | `CSSProperties` | — | 表体单元格样式 |
 | `placeholder` | `ReactNode` | — | 空值占位 |
 
 ### Summary 总结栏

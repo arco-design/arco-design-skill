@@ -57,6 +57,9 @@ const ItemGroup = Menu.ItemGroup;
 | `hasCollapseButton` | `boolean` | — | 显示收起按钮 |
 | `icons` | `{ horizontalArrowDown, popArrowRight, collapseDefault, collapseActive }` | — | 自定义图标 |
 | `ellipsis` | `boolean` | `true` | 水平模式溢出省略 |
+| `scrollConfig` | `{ [key: string]: any }` | — | 滚动到选中项时透传给 `scroll-into-view-if-needed` 的配置 |
+| `tooltipProps` | `TooltipProps` | — | 收起时项目 Tooltip 配置 |
+| `triggerProps` | `TriggerProps` | — | SubMenu pop 模式下 Trigger 配置 |
 | `onClickMenuItem` | `(key, event, keyPath) => void` | — | 点击菜单项 |
 | `onClickSubMenu` | `(key, openKeys, keyPath) => void` | — | 点击子菜单 |
 | `onCollapseChange` | `(collapse) => void` | — | 收起变化 |

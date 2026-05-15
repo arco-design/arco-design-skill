@@ -41,7 +41,19 @@ import { Trigger, Button } from '@arco-design/web-react';
 | `autoAlignPopupWidth` | `boolean` | — | 弹出层与触发器同宽 |
 | `autoAlignPopupMinWidth` | `boolean` | — | 最小宽度对齐 |
 | `autoFitPosition` | `boolean` | `true` | 自动调整位置避免遮挡 |
+| `autoFixPosition` | `boolean` | — | 触发元素尺寸变化时重新定位 |
+| `updateOnScroll` | `boolean` | — | 容器滚动时更新位置 |
 | `unmountOnExit` | `boolean` | `true` | 关闭销毁 |
+| `popupStyle` | `CSSProperties` | — | 弹出层样式 |
+| `classNames` | `string` | — | 自定义动画 class（CSSTransition） |
+| `duration` | `number \| { enter, exit }` | — | 动画时长 |
+| `childrenPrefix` | `string` | — | 触发元素 open 状态 class 前缀 |
+| `focusDelay` | `number` | — | focus 触发延迟 |
+| `getDocument` | `() => HTMLElement` | — | 用于点击外部判断的根节点 |
+| `popupHoverStay` | `boolean` | `true` | 鼠标在弹出层时保持显示 |
+| `blurToHide` | `boolean` | `true` | focus 触发模式下 blur 关闭 |
+| `mouseLeaveToClose` | `boolean` | `true` | hover 触发模式下移出关闭 |
+| `arrowProps` | `HTMLAttributes<HTMLDivElement>` | — | 自定义箭头属性 |
 | `onVisibleChange` | `(visible) => void` | — | 可见变化 |
 
 > **大多数情况不需要直接使用 Trigger**，应使用 Tooltip、Popover、Dropdown 等封装组件。

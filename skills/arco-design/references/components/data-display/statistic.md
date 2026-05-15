@@ -28,8 +28,10 @@ import { Statistic } from '@arco-design/web-react';
 | `countUp` | `boolean` | 数字动画 |
 | `countDuration` | `number` | 动画时长 ms |
 | `countFrom` | `number` | 动画起始值 |
-| `styleValue` | `CSSProperties` | 值样式 |
-| `renderFormat` | `(value) => ReactNode` | 自定义渲染 |
+| `styleValue` | `CSSProperties` | 整数部分样式 |
+| `styleDecimal` | `CSSProperties` | 小数部分样式 |
+| `extra` | `ReactNode` | 额外内容（数值下方） |
+| `renderFormat` | `(value: number \| string \| Dayjs, formattedValue: string) => ReactNode` | 自定义渲染 |
 
 ### Statistic.Countdown
 
@@ -40,4 +42,4 @@ import { Statistic } from '@arco-design/web-react';
 | `start` | `boolean` | 是否开始 |
 | `now` | `number \| string \| Date \| Dayjs` | 当前时间 |
 | `onFinish` | `() => void` | 倒计时结束回调 |
-| `onChange` | `(value) => void` | 变化回调 |
+| `renderFormat` | `(valueDiff: number, formattedDiff: string) => ReactNode` | 自定义渲染（2.36.0） |

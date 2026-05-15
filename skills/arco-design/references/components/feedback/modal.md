@@ -48,8 +48,11 @@ function Demo() {
 | `cancelButtonProps` | `ButtonProps` | — | 取消按钮属性 |
 | `footer` | `ReactNode \| null` | — | 底部内容（null 隐藏） |
 | `closable` | `boolean` | `true` | 显示关闭按钮 |
+| `closeIcon` | `ReactNode` | — | 自定义关闭图标 |
 | `mask` | `boolean` | `true` | 显示遮罩 |
 | `maskClosable` | `boolean` | `true` | 点击遮罩关闭 |
+| `maskStyle` | `CSSProperties` | — | 遮罩样式 |
+| `wrapStyle` | `CSSProperties` | — | 遮罩外层包裹样式 |
 | `confirmLoading` | `boolean` | — | 确认按钮加载中 |
 | `simple` | `boolean` | — | 简洁模式（无标题栏） |
 | `alignCenter` | `boolean` | `true` | 垂直居中 |

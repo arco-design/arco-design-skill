@@ -92,6 +92,7 @@ function BasicForm() {
 | `validateTrigger` | `string \| string[]` | — | 校验时机 |
 | `formatter` | `(value) => any` | — | 值格式化（展示用） |
 | `normalize` | `(value, prevValue, allValues) => any` | — | 值规范化（存储用） |
+| `getValueFromEvent` | `(...args) => FieldValue` | — | 自定义从事件中提取值（2.23.0） |
 | `tooltip` | `ReactNode` | — | 标签提示 |
 | `extra` | `ReactNode` | — | 额外提示文字 |
 

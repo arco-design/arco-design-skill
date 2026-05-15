@@ -44,7 +44,6 @@ Notification.normal(config);
   btn: ReactNode,          // 自定义操作按钮
   icon: ReactNode,         // 自定义图标
   onClose: () => {},       // 关闭回调
-  onClick: () => {},       // 点击回调
 }
 
 // 更新

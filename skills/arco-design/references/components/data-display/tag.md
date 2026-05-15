@@ -1,6 +1,6 @@
 ---
 name: arco-tag
-description: "Arco Design Tag component API. Use for status tags, closable tags, checkable tags (Tag.CheckableTag), colored tags, and dynamic tag lists."
+description: "Arco Design Tag component API. Use for status tags, closable tags, checkable tags (`<Tag checkable>`), colored tags, and dynamic tag lists."
 user-invocable: false
 ---
 
@@ -44,7 +44,7 @@ import { Tag } from '@arco-design/web-react';
 
 // 可选中标签（筛选场景）
 const [checked, setChecked] = useState(false);
-<Tag.CheckableTag checked={checked} onChange={setChecked}>筛选项</Tag.CheckableTag>
+<Tag checkable checked={checked} onCheck={setChecked}>筛选项</Tag>
 
 // 多种预设颜色
 {['red', 'orangered', 'orange', 'gold', 'lime', 'green', 'cyan', 'blue', 'arcoblue', 'purple', 'magenta'].map(color => (
@@ -67,5 +67,5 @@ const [inputVisible, setInputVisible] = useState(false);
 ## 最佳实践
 
 1. **状态标签用预设颜色** —— 如 success=green、error=red、warning=orange
-2. **CheckableTag 用于筛选** —— 比 Checkbox 更紧凑
+2. **`checkable` 用于筛选** —— `<Tag checkable>` 比 Checkbox 更紧凑
 3. **closable 配合列表使用** —— 展示已选项并支持移除

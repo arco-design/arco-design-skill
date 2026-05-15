@@ -33,29 +33,45 @@ import { Descriptions } from '@arco-design/web-react';
 | `border` | `boolean` | — | 边框 |
 | `colon` | `ReactNode` | — | 冒号 |
 | `labelStyle` / `valueStyle` | `CSSProperties` | — | 标签/值样式 |
+| `tableLayout` | `'auto' \| 'fixed'` | `'auto'` | 表格 `layout-fixed`，`fixed` 时宽度均分（2.6.0） |
 
 ## 常用模式
 
 ```tsx
 // 详情页展示
-<Descriptions title="用户信息" border column={2}>
-  <Descriptions.Item label="姓名">张三</Descriptions.Item>
-  <Descriptions.Item label="手机号">138****0000</Descriptions.Item>
-  <Descriptions.Item label="邮箱">zhangsan@example.com</Descriptions.Item>
-  <Descriptions.Item label="地址" span={2}>北京市朝阳区 xxx 路 xx 号</Descriptions.Item>
-</Descriptions>
+<Descriptions
+  title="用户信息"
+  border
+  column={2}
+  data={[
+    { label: '姓名', value: '张三' },
+    { label: '手机号', value: '138****0000' },
+    { label: '邮箱', value: 'zhangsan@example.com' },
+    { label: '地址', value: '北京市朝阳区 xxx 路 xx 号', span: 2 },
+  ]}
+/>
 
 // 垂直布局
-<Descriptions layout="vertical" column={3}>
-  <Descriptions.Item label="创建时间">2024-01-01</Descriptions.Item>
-  <Descriptions.Item label="更新时间">2024-06-15</Descriptions.Item>
-  <Descriptions.Item label="状态"><Badge status="success" text="已上线" /></Descriptions.Item>
-</Descriptions>
+<Descriptions
+  layout="vertical"
+  column={3}
+  data={[
+    { label: '创建时间', value: '2024-01-01' },
+    { label: '更新时间', value: '2024-06-15' },
+    { label: '状态', value: <Badge status="success" text="已上线" /> },
+  ]}
+/>
 
 // 响应式列数
-<Descriptions column={{ xs: 1, sm: 2, md: 3 }} border>
-  ...
-</Descriptions>
+<Descriptions
+  column={{ xs: 1, sm: 2, md: 3 }}
+  border
+  data={[
+    { label: '字段1', value: '值1' },
+    { label: '字段2', value: '值2' },
+    /* ... */
+  ]}
+/>
 ```
 
 ## 最佳实践

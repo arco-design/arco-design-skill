@@ -14,7 +14,7 @@ import { Link } from '@arco-design/web-react';
 <Link href="https://arco.design">默认链接</Link>
 <Link href="/page" status="success">成功链接</Link>
 <Link href="/page" status="warning">警告链接</Link>
-<Link href="/page" status="danger">危险链接</Link>
+<Link href="/page" status="error">错误链接</Link>
 <Link disabled>禁用链接</Link>
 <Link icon>带图标的链接</Link>  {/* 自动添加外链图标 */}
 ```
@@ -24,7 +24,7 @@ import { Link } from '@arco-design/web-react';
 | 属性 | 类型 | 默认值 | 说明 |
 |------|------|--------|------|
 | `href` | `string` | — | 链接地址 |
-| `status` | `'success' \| 'warning' \| 'danger' \| 'default'` | `'default'` | 链接状态 |
+| `status` | `'error' \| 'success' \| 'warning'` | — | 链接状态（未设置则为默认色） |
 | `disabled` | `boolean` | — | 禁用 |
 | `icon` | `boolean \| ReactNode` | — | 显示图标 |
 | `hoverable` | `boolean` | `true` | 是否有 hover 下划线 |
@@ -53,7 +53,7 @@ const navigate = useNavigate();
 <Space>
   <Link status="success">成功</Link>
   <Link status="warning">警告</Link>
-  <Link status="danger">危险</Link>
+  <Link status="error">错误</Link>
 </Space>
 ```
 

@@ -33,6 +33,11 @@ import { Popconfirm, Button } from '@arco-design/web-react';
 | `okType` | `ButtonProps['type']` | `'primary'` | 确认按钮类型 |
 | `position` | `TooltipPosition` | `'top'` | 弹出位置 |
 | `focusLock` | `boolean` | — | 焦点锁定 |
+| `autoFocus` | `boolean` | — | 弹出后自动聚焦首个按钮 |
+| `disabled` | `boolean` | — | 禁用（不弹出确认） |
+| `trigger` | `'hover' \| 'click' \| 'focus'` | `'click'` | 触发方式（继承 Trigger） |
+| `triggerProps` | `Partial<TriggerProps>` | — | 透传给底层 Trigger |
+| `getPopupContainer` | `(node) => Element` | — | 弹出容器 |
 
 ## 常用模式
 

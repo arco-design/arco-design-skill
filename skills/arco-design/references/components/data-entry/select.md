@@ -67,7 +67,12 @@ const Option = Select.Option;
 | `triggerElement` | `ReactNode` | — | 自定义触发元素 |
 | `onChange` | `(value, option) => void` | — | 值变化回调 |
 | `onVisibleChange` | `(visible: boolean) => void` | — | 下拉可见性变化 |
-| `onDeselect` | `(value, option) => void` | — | 取消选中回调 |
+| `onSelect` | `(value, option) => void` | — | 单次选中回调（2.52.0） |
+| `onDeselect` | `(value, option) => void` | — | 取消选中回调（多选模式） |
+| `onPopupScroll` | `(elem: HTMLElement) => void` | — | 下拉滚动 |
+| `onInputValueChange` | `(value: string, reason) => void` | — | 输入值变化 |
+| `onPaste` | `(e) => void` | — | 粘贴回调 |
+| `renderFormat` | `(option, value) => ReactNode` | — | 自定义选中态展示 |
 
 ### Select.Option Props
 
