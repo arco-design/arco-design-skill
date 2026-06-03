@@ -75,6 +75,11 @@ const [tags, setTags] = useState(['React', 'TypeScript']);
 | `validate` | `(value, values) => boolean \| Promise` | — | 标签校验 |
 | `saveOnBlur` | `boolean` | — | 失焦时保存输入 |
 | `tokenSeparators` | `string[]` | — | 触发添加的分隔符 |
+| `status` | `'error' \| 'warning'` | — | 状态（2.45.0） |
+| `labelInValue` | `boolean` | — | 值附带 label 信息 |
+| `prefix` / `suffix` | `ReactNode` | — | 前缀 / 后缀（2.47.0） |
+| `addBefore` / `addAfter` | `ReactNode` | — | 前置 / 后置标签（2.47.0） |
+| `icon` | `{ removeIcon?: ReactNode; clearIcon?: ReactNode }` | — | 自定义图标 |
 | `onChange` | `(value: string[], reason) => void` | — | 变化回调 |
 | `onRemove` | `(value, index, e) => void` | — | 删除标签 |
 | `onPressEnter` | `(e) => void` | — | 回车回调 |

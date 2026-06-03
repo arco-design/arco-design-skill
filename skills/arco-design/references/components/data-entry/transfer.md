@@ -26,15 +26,27 @@ import { Transfer } from '@arco-design/web-react';
 | 属性 | 类型 | 说明 |
 |------|------|------|
 | `dataSource` | `TransferItem[]` | 数据源 |
-| `targetKeys` | `string[]` | 右侧列表 key |
+| `targetKeys` | `string[]` | 右侧列表 key（受控） |
 | `defaultTargetKeys` | `string[]` | 默认右侧 key |
-| `showSearch` | `boolean` | 搜索 |
+| `selectedKeys` | `string[]` | 左右两边当前选中项 key（受控） |
+| `defaultSelectedKeys` | `string[]` | 默认选中项 key |
+| `showSearch` | `boolean \| { placeholder? }` | 搜索 |
+| `searchPlaceholder` | `string` | 搜索框占位（2.40.0） |
 | `showFooter` | `boolean` | 底部 |
 | `titleTexts` | `ReactNode[]` | 标题 |
-| `oneWay` | `boolean` | 单向模式 |
-| `simple` | `boolean` | 简单模式 |
+| `operations` | `ReactNode[]` | 自定义中间按钮内容 |
+| `operationTexts` | `string[]` | 中间按钮文案 |
+| `operationStyle` | `CSSProperties` | 中间按钮样式 |
+| `oneWay` | `boolean` | 单向模式（右侧不可移回） |
+| `simple` | `boolean \| { retainSelectedItems? }` | 简单模式 |
 | `pagination` | `boolean \| PaginationProps` | 分页 |
+| `filterOption` | `(inputValue, item) => boolean` | 自定义搜索过滤 |
+| `render` | `(item) => ReactNode` | 自定义项渲染 |
+| `children` | `(props) => ReactNode` | 完全自定义列表 |
 | `onChange` | `(newTargetKeys, direction, moveKeys) => void` | 变化回调 |
+| `onSelectChange` | `(sourceSelectedKeys, targetSelectedKeys) => void` | 选中态变化 |
+| `onSearch` | `(value, type: 'source' \| 'target') => void` | 搜索回调 |
+| `onResetData` | `() => void` | 重置数据回调 |
 
 ## 常用模式
 

@@ -40,7 +40,7 @@ const { Row, Col } = Grid;
 | 属性 | 类型 | 默认值 | 说明 |
 |------|------|--------|------|
 | `gutter` | `number \| [number, number] \| ResponsiveValue` | `0` | 栅格间距，[水平, 垂直] |
-| `justify` | `'start' \| 'center' \| 'end' \| 'space-between' \| 'space-around' \| 'space-evenly'` | `'start'` | 水平对齐 |
+| `justify` | `'start' \| 'center' \| 'end' \| 'space-around' \| 'space-between'` | `'start'` | 水平对齐 |
 | `align` | `'start' \| 'center' \| 'end' \| 'stretch'` | `'start'` | 垂直对齐 |
 | `wrap` | `boolean` | `true` | 是否自动换行 |
 | `div` | `boolean` | — | 使用 div 替代 flex 行为 |

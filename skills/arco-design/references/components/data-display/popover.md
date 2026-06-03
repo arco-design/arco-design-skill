@@ -30,7 +30,7 @@ import { Popover, Button } from '@arco-design/web-react';
 
 | 属性 | 类型 | 说明 |
 |------|------|------|
-| `title` | `ReactNode` | 标题 |
+| `title` | `ReactNode \| (() => ReactNode)` | 标题（函数形式 2.48.0） |
 | `content` | `ReactNode \| (() => ReactNode)` | 内容 |
 | `position` | `'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br' \| 'left' \| 'lt' \| 'lb' \| 'right' \| 'rt' \| 'rb'` | 弹出位置 |
 | `trigger` | `'hover' \| 'focus' \| 'click'` | 触发方式 |

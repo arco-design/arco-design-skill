@@ -41,4 +41,20 @@ import { Card } from '@arco-design/web-react';
 | `headerStyle` | `CSSProperties` | — | 头部样式 |
 | `bodyStyle` | `CSSProperties` | — | 内容样式 |
 
+### Card.Meta Props
+
+| 属性 | 类型 | 说明 |
+|------|------|------|
+| `avatar` | `ReactNode` | 头像 |
+| `title` | `ReactNode` | 标题 |
+| `description` | `ReactNode` | 描述 |
+
+### Card.Grid Props
+
+| 属性 | 类型 | 默认值 | 说明 |
+|------|------|--------|------|
+| `hoverable` | `boolean` | `true` | 悬停效果 |
+| `style` | `CSSProperties` | — | 自定义样式（常用于 `width: '25%'` 等栅格分割） |
+| `className` | `string \| string[]` | — | class |
+| `onClick` | `(e) => void` | — | 点击回调 |
 

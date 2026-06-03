@@ -33,7 +33,18 @@ import { TimePicker } from '@arco-design/web-react';
 | `placeholder` | `string` | — | 占位文字 |
 | `size` | `'mini' \| 'small' \| 'default' \| 'large'` | — | 尺寸 |
 | `showNowBtn` | `boolean` | `true` | 显示"此刻"按钮 |
-| `onChange` | `(timeString, time) => void` | — | 值变化 |
+| `editable` | `boolean` | `true` | 允许手动输入 |
+| `position` | `'top' \| 'tl' \| 'tr' \| 'bottom' \| 'bl' \| 'br'` | `'bl'` | 弹出位置 |
+| `unmountOnExit` | `boolean` | — | 关闭时销毁弹出层 |
+| `triggerElement` | `ReactNode \| ((params) => ReactNode)` | — | 自定义触发元素 |
+| `extra` | `ReactNode` | — | 面板底部额外内容 |
+| `icons` | `{ inputSuffix?: ReactNode }` | — | 自定义图标 |
+| `utcOffset` | `number` | — | UTC 偏移 |
+| `timezone` | `string` | — | 时区名 |
+| `disabledHours` | `() => number[]` | — | 禁用小时 |
+| `disabledMinutes` | `(hour: number) => number[]` | — | 禁用分钟 |
+| `disabledSeconds` | `(hour: number, minute: number) => number[]` | — | 禁用秒 |
+| `onChange` | `(timeString: string, time: Dayjs) => void` | — | 值变化 |
 
 ## 常用模式
 

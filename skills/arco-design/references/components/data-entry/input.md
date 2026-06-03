@@ -38,7 +38,10 @@ import { Input } from '@arco-design/web-react';
 | `suffix` | `ReactNode` | — | 后缀 |
 | `addBefore` | `ReactNode` | — | 前置标签 |
 | `addAfter` | `ReactNode` | — | 后置标签 |
-| `maxLength` | `number \| { length: number; errorOnly: boolean }` | — | 最大长度 |
+| `maxLength` | `number \| { length: number; errorOnly?: boolean }` | — | 最大长度（`errorOnly: true` 时超长仅 error 态、不限制输入） |
+| `normalize` | `(value: string) => string` | — | 值规范化（2.50.0） |
+| `normalizeTrigger` | `('onBlur' \| 'onPressEnter')[]` | `['onBlur']` | 触发 `normalize` 的事件（2.50.0） |
+| `clearIcon` | `ReactNode` | — | 自定义清除图标（2.50.0） |
 | `showWordLimit` | `boolean` | — | 显示字数统计 |
 | `onChange` | `(value: string, e: Event) => void` | — | 值变化 |
 | `onPressEnter` | `(e: Event) => void` | — | 回车回调 |

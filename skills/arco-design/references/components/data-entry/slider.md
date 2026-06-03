@@ -34,6 +34,7 @@ import { Slider } from '@arco-design/web-react';
 | `reverse` | `boolean` | — | 反向 |
 | `tooltipVisible` | `boolean` | — | 提示是否一直显示 |
 | `formatTooltip` | `(value: number) => ReactNode` | — | 提示格式化 |
+| `getIntervalConfig` | `(intervalKey: number, prevIntervalKey: number) => { step?, marks? }` | — | 分段配置不同 step / marks（2.30.0） |
 | `onChange` | `(value) => void` | — | 值变化（松开后） |
 | `onAfterChange` | `(value) => void` | — | 拖拽结束回调 |
 

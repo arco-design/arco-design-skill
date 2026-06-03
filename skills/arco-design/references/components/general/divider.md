@@ -43,8 +43,8 @@ import { Divider } from '@arco-design/web-react';
 <Divider orientation="left">左侧标题</Divider>
 <Divider orientation="right">右侧标题</Divider>
 
-// 虚线
-<Divider type="dashed" />
+// 虚线（v2.53.2 没有 `dashed` prop，用 style 覆盖）
+<Divider style={{ borderBottomStyle: 'dashed' }} />
 
 // 垂直分割线（行内使用）
 <Space>

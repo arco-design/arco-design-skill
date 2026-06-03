@@ -57,11 +57,14 @@ import { PageHeader, Button } from '@arco-design/web-react';
 
 // 带内容区域
 <PageHeader title="页面标题" onBack={() => navigate(-1)}>
-  <Descriptions column={3}>
-    <Descriptions.Item label="创建人">张三</Descriptions.Item>
-    <Descriptions.Item label="创建时间">2024-01-01</Descriptions.Item>
-    <Descriptions.Item label="状态"><Badge status="success" text="已完成" /></Descriptions.Item>
-  </Descriptions>
+  <Descriptions
+    column={3}
+    data={[
+      { label: '创建人', value: '张三' },
+      { label: '创建时间', value: '2024-01-01' },
+      { label: '状态', value: <Badge status="success" text="已完成" /> },
+    ]}
+  />
 </PageHeader>
 ```
 

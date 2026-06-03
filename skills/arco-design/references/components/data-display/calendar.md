@@ -19,9 +19,9 @@ import { Calendar } from '@arco-design/web-react';
 | 属性 | 类型 | 说明 |
 |------|------|------|
 | `value` / `defaultValue` | `Dayjs` | 当前日期 |
-| `mode` | `'month' \| 'year'` | 视图模式 |
+| `mode` | `'day' \| 'week' \| 'month' \| 'year'` | 视图模式 |
 | `panel` | `boolean` | 面板模式（无切换按钮） |
-| `panelWidth` | `number` | 面板宽度 |
+| `panelWidth` | `number \| string` | 面板宽度 |
 | `dayStartOfWeek` | `0 \| 1` | 周起始日 |
 | `dateRender` | `(date) => ReactNode` | 自定义日期渲染 |
 | `dateInnerContent` | `(date) => ReactNode` | 日期内容 |

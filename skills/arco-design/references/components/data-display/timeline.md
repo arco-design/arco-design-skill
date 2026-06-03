@@ -27,7 +27,7 @@ import { Timeline } from '@arco-design/web-react';
 | 属性 | 类型 | 默认值 | 说明 |
 |------|------|--------|------|
 | `direction` | `'horizontal' \| 'vertical'` | `'vertical'` | 方向 |
-| `mode` | `'left' \| 'right' \| 'alternate'` | `'left'` | 显示模式 |
+| `mode` | `'left' \| 'right' \| 'top' \| 'bottom' \| 'alternate'` | `'left'` | 显示模式（`top` / `bottom` 用于横向 Timeline） |
 | `reverse` | `boolean` | — | 逆序 |
 | `pending` | `boolean \| ReactNode` | — | 加载中 |
 | `labelPosition` | `'relative' \| 'same'` | — | 标签位置 |
@@ -42,3 +42,5 @@ import { Timeline } from '@arco-design/web-react';
 | `dotType` | `'default' \| 'hollow'` | 节点类型 |
 | `lineType` | `'solid' \| 'dashed' \| 'dotted'` | 连线类型 |
 | `lineColor` | `string` | 连线颜色 |
+| `labelPosition` | `'relative' \| 'same'` | 标签位置（覆盖 Timeline） |
+| `autoFixDotSize` | `boolean` | 自适应节点尺寸（默认 `true`） |

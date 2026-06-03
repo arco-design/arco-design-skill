@@ -40,10 +40,13 @@ const treeData = [
 | `checkable` | `boolean` | — | 带复选框 |
 | `selectable` | `boolean` | `true` | 可选中 |
 | `multiple` | `boolean` | — | 多选 |
-| `checkedKeys` / `defaultCheckedKeys` | `string[]` | — | 选中的 key |
+| `checkedKeys` / `defaultCheckedKeys` | `string[]` | — | 勾选的 key |
+| `halfCheckedKeys` | `string[]` | — | 半选 key（受控；2.27.0） |
 | `expandedKeys` / `defaultExpandedKeys` | `string[]` | — | 展开的 key |
 | `selectedKeys` / `defaultSelectedKeys` | `string[]` | — | 选中的 key |
 | `checkStrictly` | `boolean` | — | 父子不关联 |
+| `checkedStrategy` | `'all' \| 'parent' \| 'child'` (`Tree.SHOW_ALL` 等) | `'all'` | 返回的 checkedKeys 包含哪些层级 |
+| `actionOnClick` | `'select' \| 'check' \| 'expand' \| ('select' \| 'check' \| 'expand')[]` | `'select'` | 点击节点行为 |
 | `autoExpandParent` | `boolean` | `true` | 自动展开父节点 |
 | `draggable` | `boolean` | — | 可拖拽 |
 | `blockNode` | `boolean` | — | 整行选中 |
@@ -57,6 +60,10 @@ const treeData = [
 | `onSelect` | `(selectedKeys, extra) => void` | — | 选中回调 |
 | `onCheck` | `(checkedKeys, extra) => void` | — | 勾选回调 |
 | `onExpand` | `(expandedKeys, extra) => void` | — | 展开回调 |
+| `onDragStart` | `(e, node) => void` | — | 拖拽开始 |
+| `onDragEnd` | `(e, node) => void` | — | 拖拽结束 |
+| `onDragOver` | `(e, node) => void` | — | 拖拽经过节点 |
+| `onDragLeave` | `(e, node) => void` | — | 拖离节点 |
 | `onDrop` | `(info) => void` | — | 拖拽放置 |
 | `allowDrop` | `(options) => boolean` | — | 是否允许放置 |
 

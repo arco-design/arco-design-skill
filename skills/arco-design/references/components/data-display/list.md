@@ -50,3 +50,8 @@ import { List } from '@arco-design/web-react';
 | `virtualListProps` | `VirtualListProps` | 虚拟滚动 |
 | `scrollLoading` | `ReactNode` | 滚动加载 |
 | `onReachBottom` | `() => void` | 触底回调 |
+| `onListScroll` | `(elem: Element) => void` | 列表滚动回调 |
+| `throttleDelay` | `number` | `onListScroll` 节流时间 |
+| `wrapperStyle` | `CSSProperties` | 外层包裹样式 |
+| `wrapperClassName` | `string \| string[]` | 外层包裹 class |
+| `listRef` | `MutableRefObject<HTMLDivElement>` | 列表 DOM ref |

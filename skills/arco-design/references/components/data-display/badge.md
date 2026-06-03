@@ -24,6 +24,7 @@ import { Badge, Avatar } from '@arco-design/web-react';
 | `maxCount` | `number` | `99` | 最大显示数 |
 | `dot` | `boolean` | — | 小红点 |
 | `dotStyle` | `CSSProperties` | — | 点样式 |
+| `dotClassName` | `string \| string[]` | — | 点 class |
 | `offset` | `[number, number]` | — | 偏移 |
 | `text` | `string` | — | 文本 |
 | `status` | `'default' \| 'processing' \| 'success' \| 'warning' \| 'error'` | — | 状态点 |

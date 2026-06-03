@@ -25,7 +25,7 @@ import { Pagination } from '@arco-design/web-react';
 | `showTotal` | `boolean \| ((total, range) => ReactNode)` | — | 显示总数 |
 | `showJumper` | `boolean` | — | 快速跳转 |
 | `showMore` | `boolean` | — | 显示更多 |
-| `sizeCanChange` | `boolean` | `true` | 可改变每页条数 |
+| `sizeCanChange` | `boolean` | `false` | 显示每页条数切换器 |
 | `sizeOptions` | `number[]` | `[10,20,30,40,50]` | 每页条数选项 |
 | `simple` | `boolean` | — | 简洁模式 |
 | `size` | `'mini' \| 'small' \| 'default' \| 'large'` | — | 尺寸 |

@@ -40,6 +40,8 @@ import { Dropdown, Menu, Button } from '@arco-design/web-react';
 | `disabled` | `boolean` | — | 禁用 |
 | `popupVisible` / `defaultPopupVisible` | `boolean` | — | 可见状态 |
 | `unmountOnExit` | `boolean` | `true` | 关闭销毁 |
+| `getPopupContainer` | `(node) => Element` | — | 弹出容器（默认 `document.body`） |
+| `triggerProps` | `Partial<TriggerProps>` | — | 透传给底层 Trigger（如 `mouseEnterDelay`、`autoFitPosition`） |
 | `onVisibleChange` | `(visible) => void` | — | 可见变化 |
 
 ### Dropdown.Button

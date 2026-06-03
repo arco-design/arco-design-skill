@@ -36,6 +36,9 @@ import { InputNumber } from '@arco-design/web-react';
 | `formatter` | `(value) => string` | — | 显示格式化 |
 | `parser` | `(value) => number` | — | 解析格式化后的值 |
 | `strictMode` | `boolean` | — | 严格模式（输入过程中也限制范围） |
+| `readOnly` | `boolean` | — | 只读（2.17.0） |
+| `hideControl` | `boolean` | — | 隐藏增减控件 |
+| `icons` | `{ up?: ReactNode; down?: ReactNode; plus?: ReactNode; minus?: ReactNode }` | — | 自定义图标 |
 | `onChange` | `(value: number) => void` | — | 值变化 |
 
 ## 常用模式

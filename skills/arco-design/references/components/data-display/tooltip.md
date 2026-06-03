@@ -33,6 +33,14 @@ import { Tooltip, Button } from '@arco-design/web-react';
 | `mini` | `boolean` | — | 迷你模式 |
 | `disabled` | `boolean` | — | 禁用 |
 | `getPopupContainer` | `(node) => Element` | — | 弹出容器 |
+| `triggerProps` | `Partial<TriggerProps>` | — | 透传给底层 Trigger |
+| `unmountOnExit` | `boolean` | `true` | 关闭后销毁 |
+| `popupHoverStay` | `boolean` | `true` | 鼠标停留在弹出层时保持显示 |
+| `blurToHide` | `boolean` | `true` | focus 触发模式下 blur 关闭 |
+| `escToClose` | `boolean` | — | ESC 关闭 |
+| `mouseEnterDelay` | `number` | `100` | 显示延迟 ms（透传 Trigger） |
+| `mouseLeaveDelay` | `number` | `100` | 隐藏延迟 ms（透传 Trigger） |
+| `childrenPrefix` | `string` | — | 自定义触发元素 active class 前缀 |
 | `onVisibleChange` | `(visible: boolean) => void` | — | 可见变化 |
 
 ## 常用模式
